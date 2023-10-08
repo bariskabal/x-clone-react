@@ -1,7 +1,8 @@
 import { useAccounts, useAccount } from "~/store/auth/hooks"
 import classNames from "classnames";
+import { setCurrentAccount } from "~/store/auth/action";
 
-export default function More() {
+export default function More({ close }) {
 
     const currentAccount = useAccount()
     const accounts = useAccounts()
@@ -11,7 +12,7 @@ export default function More() {
             {(Object.keys(accounts).length > 1) && ( 
                 <>
                 {accounts.map((account,index) => (
-                    <button key={index} className={classNames("py-3 px-4 flex text-left items-center w-full transition-colors outline-none",{
+                    <button type="button" onClick={() => {setCurrentAccount(account), close()}} disabled={currentAccount.id == account.id}  key={index} className={classNames("py-3 px-4 flex text-left items-center w-full transition-colors outline-none",{
                         "hover:bg-[#eff3f41a]": currentAccount.id !== account.id
                     })}>
                         <img src={account.avatar} className="w-10 h-10 rounded-full" /> 
