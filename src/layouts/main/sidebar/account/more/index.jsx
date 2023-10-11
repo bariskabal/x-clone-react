@@ -13,7 +13,7 @@ export default function More({ close }) {
                 <>
                 {accounts.map((account,index) => (
                     <button type="button" onClick={() => {setCurrentAccount(account), close()}} disabled={currentAccount.id == account.id}  key={index} className={classNames("py-3 px-4 flex text-left items-center w-full transition-colors outline-none",{
-                        "hover:bg-[#eff3f41a]": currentAccount.id !== account.id
+                        "hover:bg-[color:var(--background-secondary)]": currentAccount.id !== account.id
                     })}>
                         <img src={account.avatar} className="w-10 h-10 rounded-full" /> 
                         <div className='mx-3 text-[15px] flex-1'>
@@ -31,18 +31,18 @@ export default function More({ close }) {
                         )}
                     </button>
                 ))}
-                <div className="h-px bg-[#2f3336] my-3" />
+                <div className="h-px bg-[color:var(--background-third)] my-3" />
                 </>
             )}
-            <button className="py-3 px-4 text-left  hover:bg-[#eff3f41a] transition-colors w-full  text-[15px] font-bold leading-[20px]">
+            <button className="py-3 px-4 text-left  hover:bg-[color:var(--background-secondary)] transition-colors w-full  text-[15px] font-bold leading-[20px]">
                     Var olan bir hesap ekle
             </button>
             {(Object.keys(accounts).length >1) && (
-                <button className="py-3 px-4 text-left  hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-[20px]">
+                <button className="py-3 px-4 text-left  hover:bg-[color:var(--background-secondary)] transition-colors w-full text-[15px] font-bold leading-[20px]">
                 Hesapları yönet
                 </button>
             )}
-            <button className="py-3 px-4 text-left  hover:bg-[#eff3f41a] transition-colors w-full text-[15px] font-bold leading-[20px]">
+            <button className="py-3 px-4 text-left  hover:bg-[color:var(--background-secondary)] transition-colors w-full text-[15px] font-bold leading-[20px]">
                 <div className="max-w-[228px]">
                     @{currentAccount.username} hesabından çıkış yap
                 </div>

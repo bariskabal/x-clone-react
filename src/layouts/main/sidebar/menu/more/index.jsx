@@ -6,7 +6,7 @@ import { setModal } from "~/store/modal/action"
 export default function More() {
     return (
         <Popover className="relative text-[color:var(--color-base)]">
-            <Popover.Button  className="py-[3px] block group outline-none">
+            <Popover.Button  className="py-[3px] group outline-none w-full text-left">
                 <div className="inline-flex items-center gap-5 p-3 rounded-full group-hover:bg-[color:var(--background-secondary)] transition-colors">
                     <div className="w-[26.25px] h-[26.25px] relative">
                         <svg viewBox="0 0 24 24" width={26.25} height={26.25} className="block">

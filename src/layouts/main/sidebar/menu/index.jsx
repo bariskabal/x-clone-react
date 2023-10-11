@@ -19,7 +19,7 @@ export default function Menu() {
                     })}>
                     <div className="w-[26.25px] h-[26.25px] relative">
                         {menu.notification && (
-                            <span className="w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] border border-color-[color:var(--background-primary)] text-[color:var(--background-primary)] absolute -top-1.5 -right-1 text-[11px] flex items-center justify-center">
+                            <span className="w-[18px] h-[18px] rounded-full bg-[color:var(--color-primary)] border border-color-[color:var(--background-primary)] text-white absolute -top-1.5 -right-1 text-[11px] flex items-center justify-center">
                                 {menu.notification}
                             </span>
                         )}
